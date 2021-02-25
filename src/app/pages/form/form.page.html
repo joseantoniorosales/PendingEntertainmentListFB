@@ -1,0 +1,145 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu" class="title"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title">ITEM FORM</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+
+    <ion-icon name="document-text-outline"></ion-icon>
+
+    <ion-input class="text" clearInput placeholder="Title" [(ngModel)]="itemList.title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="document-text-outline"></ion-icon>
+
+
+    <ion-input class="text" clearInput placeholder="Original Title (In case It has one)" [(ngModel)]="itemList.ogTitle">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="document-text-outline"></ion-icon>
+
+
+    <ion-input class="text" placeholder="Description" clearInput [(ngModel)]="itemList.description"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="image-outline"></ion-icon>
+
+    <ion-input class="text" clearInput placeholder="Image URL" [(ngModel)]="itemList.url"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="file-tray-stacked-outline"></ion-icon>
+
+    <ion-input class="text" clearInput placeholder="Saga" [(ngModel)]="itemList.saga"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="file-tray-stacked-outline"></ion-icon>
+
+
+    <ion-input class="text" clearInput placeholder="Original Series (If It's derivated from a bigger one)"
+      [(ngModel)]="itemList.ogSaga"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="file-tray-full-outline"></ion-icon>
+
+    <ion-input class="text" clearInput placeholder="Game entry" [(ngModel)]="itemList.sagaEntry"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="documents-outline"></ion-icon>
+
+    <ion-input class="text" placeholder="Genre1" clearInput [(ngModel)]="itemList.genre1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="documents-outline"></ion-icon>
+
+    <ion-input class="text" clearInput placeholder="Genre2" [(ngModel)]="itemList.genre2"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="timer-outline"></ion-icon>
+
+    <ion-input class="text" clearInput placeholder="Duration" [(ngModel)]="itemList.duration"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-icon name="body-outline"></ion-icon>
+
+    <ion-input class="text" clearInput placeholder="Company" [(ngModel)]="itemList.company"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+
+    <ion-icon name="checkmark-outline" color="success"></ion-icon>
+    <ion-select class="text" placeholder="State" interface="popover" [(ngModel)]="itemList.state">
+      <ion-select-option value="Completed">
+        Completed</ion-select-option>
+      <ion-select-option value="On-Going">On-Going</ion-select-option>
+      <ion-select-option value="Stand-By">Stand-By</ion-select-option>
+      <ion-select-option value="Plan to Play">Plan to Play</ion-select-option>
+      <ion-select-option value="Replaying">Replaying</ion-select-option>
+      <ion-select-option value="Dropped">Dropped</ion-select-option>
+      <ion-select-option value="Not Released Yet">Not Released Yet</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+
+
+    <ion-icon name="game-controller"></ion-icon>
+
+    <ion-select interface="popover" class="text" placeholder="Platform" [(ngModel)]="itemList.platform">
+      <ion-select-option value="PS4/5 Ex">
+        PS4/5 Exclusive</ion-select-option>
+      <ion-select-option value="XBOX ONE/SX">XBOX ONE/ SERIES X Exclusive</ion-select-option>
+      <ion-select-option value="Nintendo Switch">Nintendo Switch Exclusive</ion-select-option>
+      <ion-select-option value="Nintendo 3DS Release">Nintendo 3DS Exclusive</ion-select-option>
+      <ion-select-option value="Epic Store EX">PC Exclusive</ion-select-option>
+      <ion-select-option value="Steam Exclusive">Steam Exclusive</ion-select-option>
+      <ion-select-option value="Epic Store EX">Epic Store Exclusive</ion-select-option>
+      <ion-select-option value="XBOX/PlayStation Release">XBOX/PlayStation Release</ion-select-option>
+      <ion-select-option value="Tabletop Consoles Release">Tabletop Consoles Release</ion-select-option>
+      <ion-select-option value="All Modern Platforms">All modern platforms release</ion-select-option>
+      <ion-select-option value="Old Generation Console">Old Generation Console</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Rating</ion-label>
+    <ion-range pin min="0" max="100" step="10" value="itemList.rating" snaps color="secondary"
+      [(ngModel)]="itemList.rating">
+      <ion-icon slot="start" size="small" color="warning" name="star-outline"></ion-icon>
+    </ion-range>
+  </ion-item>
+  <br>
+
+  <ion-button class="text" (click)="additem()" color="secondary" expand="full">
+
+    <ion-icon name="save-outline"></ion-icon>
+    SAVE
+  </ion-button>
+</ion-content>

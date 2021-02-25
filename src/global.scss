@@ -24,3 +24,64 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+/* Custom fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* Dot font */
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.title {
+    
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    background-color: #2e7197;
+}
+
+.text {
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.titleText {
+
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.center {
+    text-align: center;
+}
+
+.icon {
+    font-size: 8em;
+    color: #2e7197;
+}
+
+.loginLink {
+
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 80;
+    font-size: 0.3em;
+    color: #2e7197;
+}
+
+.infoLink {
+
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+    color: white;
+
+}

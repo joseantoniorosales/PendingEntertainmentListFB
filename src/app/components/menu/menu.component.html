@@ -1,0 +1,29 @@
+<ion-menu side="end" menuId="main-menu" contentId="main">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="title">Options</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item *ngIf="authService.getCurrentUser() | async" (click)="logout()">
+        <ion-icon name="exit-outline" slot="start"></ion-icon>
+        <p class="text">Logout</p>
+      </ion-item>
+
+      <ion-item>
+
+        <div class="center">
+
+          <a class="infoLink" href="/info">
+            <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+            
+            About the app
+          </a>
+        </div>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+

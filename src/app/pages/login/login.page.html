@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu" class="title"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title">PENDING LIST</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-icon name="send" class="icon"></ion-icon>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item>
+      <ion-input
+        class="text ion-text-center"
+        clearInput
+        placeholder="E-Mail"
+        [(ngModel)]="email">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        [type]="passwordShown ? 'text' : 'password'"
+        class="text ion-text-center"
+        clearInput
+        placeholder="Password"
+        (keyup.enter)="login()"
+        [(ngModel)]="password">
+      </ion-input>
+      <ion-icon [name]='passwordToggleIcon' slot="end" (click)="togglePassword()" ></ion-icon>
+    </ion-item>
+  </ion-list>
+
+
+  <br>
+
+  <ion-button
+    expand="block"
+    class="titleText capitalize"
+    color="primary"
+    shape="round"
+    (click)="login()">
+    ACCEPT
+  </ion-button>
+
+  <br>
+
+  <div class="center">
+    <a class="loginLink" href="/register">
+      <ion-icon name="person-add-outline"></ion-icon>
+      CREATE ACCOUNT
+    </a>
+    <br>
+    <br>
+    <a class="loginLink" href="/reset-password">
+      <ion-icon name="mail-outline"></ion-icon>
+      PASSWORD RECOVERY
+    </a>
+  </div>
+
+
+  {{ user | json }}
+</ion-content>
