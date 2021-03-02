@@ -11,9 +11,19 @@ import { ItemService } from 'src/app/services/item.service';
 })
 export class FormPage implements OnInit {
 
-  itemList: Item = { id: '', title: '', ogTitle: '', shortName: '', saga: '', ogSaga: '', sagaEntry: '', company: '', genre1: '', genre2: '', description: '', director: '', platform: '', duration: 0, state: '', rating: 0, fav: false, url: '' }
-;
-  pageTitle: string = "Nuevo elemento";
+  itemList: Item = {
+    id: '', title: '', ogTitle: '', shortName: '', saga: '', ogSaga: '', sagaEntry: '', company: '', genre1: '', genre2: '', description: '', platform: '', duration: 0, state: '', rating: 0, fav: false, url: '',
+
+    type: '', 
+    
+    animationCompany: '', chapters: 0, audio: '', 
+    
+    author: '', numPages: 0, 
+    
+    composer: ''
+  };
+
+  pageTitle: string = "New Item";
   id: string;
   action: string = "create";
 
@@ -24,9 +34,12 @@ export class FormPage implements OnInit {
   ) { }
 
   ngOnInit() {
+
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
-    if (this.id != null) { // edit mode
-      this.pageTitle = "Editar elemento";
+
+    if (this.id != null) {
+
+      this.pageTitle = "Edit item";
       this.action = "edit";
       this.itemListService.getItemById(this.id)
         .subscribe(
@@ -36,12 +49,16 @@ export class FormPage implements OnInit {
   }
 
   additem() {
+
     if (this.action === 'create') {
+
       this.itemListService.addItem(this.itemList);
+
     } else {
+
       this.itemListService.updateItemById(this.id, this.itemList);
     }
-    
+
     this.router.navigateByUrl('/list');
   }
 }

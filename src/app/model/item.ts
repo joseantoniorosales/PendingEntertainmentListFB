@@ -25,13 +25,37 @@ export class Item {
     rating: number;
     fav?: boolean;
 
+    type: String;
+
     // Propiedades videojuegos
 
-    platform: String;
+    platform?: String;
 
-    company: String;
+    company?: String;
 
-    duration: number;
+    duration?: number;
 
-    director?: String;
+    
+
+    //Propiedades anime
+
+    animationCompany?: String;
+
+    chapters?: number;
+
+    audio?: String;
+
+    // Propiedades libros
+
+    author?: String;
+
+    numPages?: number;
+
+    // Propiedades comunes
+
+    composer?: String;
+
+
+
+
 }

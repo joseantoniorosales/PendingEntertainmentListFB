@@ -20,6 +20,7 @@
           <img width="280px" src="{{ item.url }}" />
 
           <h1 class="text">{{ item.title }}</h1>
+          <h2 class="text"> {{ item.type }} </h2>
           <h3 class="text"> Saga: {{ item.saga }} </h3>
           <h3 class="text"> Saga Entry: {{ item.sagaEntry }}</h3>
           <h3 class="text">By {{ item.company }} </h3>
@@ -30,14 +31,6 @@
       </ion-item>
 
       <ion-item-options>
-
-        <ion-item-option color="primary" (click)="presentAlertInfo(item.itemId)">
-
-          <ion-icon name="information-circle-outline" slot="icon-only"></ion-icon>
-
-        </ion-item-option>
-
-        
 
         <ion-item-option color="warning" (click)="goEditItem(item.itemId)">
 
