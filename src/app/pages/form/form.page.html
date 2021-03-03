@@ -97,103 +97,106 @@
 
   <!-- Game Options -->
 
-  <!-- <ion-item *ngIf="itemList.type = 'Games' "> -->
+  <div *ngIf="itemList?.type == 'Game' ">
 
-  <ion-item>
+    <ion-item>
 
-    <ion-icon name="timer-outline"></ion-icon>
+      <ion-icon name="timer-outline"></ion-icon>
 
-    <ion-input class="text" clearInput placeholder="Duration" [(ngModel)]="itemList.duration"></ion-input>
-  </ion-item>
+      <ion-input class="text" clearInput placeholder="Duration" [(ngModel)]="itemList.duration"></ion-input>
+    </ion-item>
 
-  <ion-item>
+    <ion-item>
 
-    <ion-icon name="body-outline"></ion-icon>
+      <ion-icon name="body-outline"></ion-icon>
 
-    <ion-input class="text" clearInput placeholder="Company" [(ngModel)]="itemList.company"></ion-input>
-  </ion-item>
+      <ion-input class="text" clearInput placeholder="Company" [(ngModel)]="itemList.company"></ion-input>
+    </ion-item>
 
-
-
-  <ion-item>
+    <ion-item>
 
 
-    <ion-icon name="game-controller"></ion-icon>
+      <ion-icon name="game-controller"></ion-icon>
 
-    <ion-select interface="popover" class="text" placeholder="Platform" [(ngModel)]="itemList.platform">
-      <ion-select-option value="PS4/5 Ex">
-        PS4/5 Exclusive</ion-select-option>
-      <ion-select-option value="XBOX ONE/SX">XBOX ONE/ SERIES X Exclusive</ion-select-option>
-      <ion-select-option value="Nintendo Switch">Nintendo Switch Exclusive</ion-select-option>
-      <ion-select-option value="Nintendo 3DS Release">Nintendo 3DS Exclusive</ion-select-option>
-      <ion-select-option value="PC Exclusive">PC Exclusive</ion-select-option>
-      <ion-select-option value="Steam Exclusive">Steam Exclusive</ion-select-option>
-      <ion-select-option value="Epic Store EX">Epic Store Exclusive</ion-select-option>
-      <ion-select-option value="XBOX/PlayStation Release">XBOX/PlayStation Release</ion-select-option>
-      <ion-select-option value="Tabletop Consoles Release">Tabletop Consoles Release</ion-select-option>
-      <ion-select-option value="All Modern Platforms">All modern platforms release</ion-select-option>
-      <ion-select-option value="Old Generation Console">Old Generation Console</ion-select-option>
-    </ion-select>
-  </ion-item>
+      <ion-select interface="popover" class="text" placeholder="Platform" [(ngModel)]="itemList.platform">
+        <ion-select-option value="PS4/5 Ex">
+          PS4/5 Exclusive</ion-select-option>
+        <ion-select-option value="XBOX ONE/SX">XBOX ONE/ SERIES X Exclusive</ion-select-option>
+        <ion-select-option value="Nintendo Switch">Nintendo Switch Exclusive</ion-select-option>
+        <ion-select-option value="Nintendo 3DS Release">Nintendo 3DS Exclusive</ion-select-option>
+        <ion-select-option value="PC Exclusive">PC Exclusive</ion-select-option>
+        <ion-select-option value="Steam Exclusive">Steam Exclusive</ion-select-option>
+        <ion-select-option value="Epic Store EX">Epic Store Exclusive</ion-select-option>
+        <ion-select-option value="XBOX/PlayStation Release">XBOX/PlayStation Release</ion-select-option>
+        <ion-select-option value="Tabletop Consoles Release">Tabletop Consoles Release</ion-select-option>
+        <ion-select-option value="All Modern Platforms">All modern platforms release</ion-select-option>
+        <ion-select-option value="Old Generation Console">Old Generation Console</ion-select-option>
+      </ion-select>
+    </ion-item>
 
-  <!-- </ion-item> -->
+  </div>
+
 
   <!-- Anime Options -->
 
-  <!--
+  <div *ngIf="itemList?.type == 'Anime' ">
 
-  <ion-item>
 
-    <ion-icon name="documents-outline"></ion-icon>
+    <ion-item>
 
-    <ion-input class="text" clearInput placeholder="Animation Company" [(ngModel)]="itemList.animationCompany">
-    </ion-input>
-  </ion-item>
+      <ion-icon name="documents-outline"></ion-icon>
 
-  <ion-item>
+      <ion-input class="text" clearInput placeholder="Animation Company" [(ngModel)]="itemList.animationCompany">
+      </ion-input>
+    </ion-item>
 
-    <ion-icon name="documents-outline"></ion-icon>
+    <ion-item>
 
-    <ion-input class="text" clearInput placeholder="Num of Chapters" [(ngModel)]="itemList.chapters"></ion-input>
-  </ion-item>
+      <ion-icon name="documents-outline"></ion-icon>
 
-  <ion-item>
+      <ion-input class="text" clearInput placeholder="Num of Chapters" [(ngModel)]="itemList.chapters"></ion-input>
+    </ion-item>
 
-    <ion-icon name="checkmark-outline" color="success"></ion-icon>
-    <ion-select class="text" placeholder="Audio" interface="popover" [(ngModel)]="itemList.audio">
+    <ion-item>
 
-      <ion-select-option value="JpnDub/Sub">JpnDub/Sub</ion-select-option>
+      <ion-icon name="checkmark-outline" color="success"></ion-icon>
+      <ion-select class="text" placeholder="Audio" interface="popover" [(ngModel)]="itemList.audio">
 
-      <ion-select-option value="JpnDub/Raw">JpnDub/Raw</ion-select-option>
+        <ion-select-option value="JpnDub/Sub">JpnDub/Sub</ion-select-option>
 
-      <ion-select-option value="EngDub">EngDub</ion-select-option>
+        <ion-select-option value="JpnDub/Raw">JpnDub/Raw</ion-select-option>
 
-      <ion-select-option value="SpnDub">SpnDub</ion-select-option>
+        <ion-select-option value="EngDub">EngDub</ion-select-option>
 
-    </ion-select>
-  </ion-item>
+        <ion-select-option value="SpnDub">SpnDub</ion-select-option>
 
-  -->
+      </ion-select>
+    </ion-item>
+
+  </div>
+
+
 
   <!-- Book Options -->
 
-  <!--
+  <div *ngIf="itemList?.type == 'Book' ">
 
-  <ion-item>
 
-    <ion-icon name="documents-outline"></ion-icon>
+    <ion-item>
 
-    <ion-input class="text" clearInput placeholder="Author" [(ngModel)]="itemList.author"></ion-input>
-  </ion-item>
+      <ion-icon name="documents-outline"></ion-icon>
 
-  <ion-item>
+      <ion-input class="text" clearInput placeholder="Author" [(ngModel)]="itemList.author"></ion-input>
+    </ion-item>
 
-    <ion-icon name="documents-outline"></ion-icon>
+    <ion-item>
 
-    <ion-input class="text" clearInput placeholder="Num of pages" [(ngModel)]="itemList.numPages"></ion-input>
-  </ion-item>
+      <ion-icon name="documents-outline"></ion-icon>
 
-  -->
+      <ion-input class="text" clearInput placeholder="Num of pages" [(ngModel)]="itemList.numPages"></ion-input>
+    </ion-item>
+
+  </div>
 
 
 

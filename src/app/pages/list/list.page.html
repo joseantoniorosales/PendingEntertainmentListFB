@@ -23,7 +23,32 @@
           <h2 class="text"> {{ item.type }} </h2>
           <h3 class="text"> Saga: {{ item.saga }} </h3>
           <h3 class="text"> Saga Entry: {{ item.sagaEntry }}</h3>
-          <h3 class="text">By {{ item.company }} </h3>
+
+
+          <div *ngIf="item?.type == 'Game' ">
+
+            <h3 class="text">Developer: {{ item.company }} </h3>
+            <h3 class="text">Platform: {{ item.platform }} </h3>
+
+          </div>
+
+          <div *ngIf="item?.type == 'Anime' ">
+
+            <h3 class="text">Animation: {{ item.animationCompany }} </h3>
+            <h3 class="text">Nº chapters: {{ item.chapters }} </h3>
+            <h3 class="text">Languaje: {{ item.audio }} </h3>
+
+
+          </div>
+
+
+          <div *ngIf="item?.type == 'Book' ">
+
+            <h3 class="text">Author: {{ item.author }} </h3>
+            <h3 class="text">Nº Pages: {{ item.numPages }} </h3>
+
+          </div>
+
           <h3 class="text">Rating: {{ item.rating }} </h3>
 
         </ion-label>

@@ -2,15 +2,15 @@ export class Item {
     
     id?: string;
 
-    url: String;
+    url: string;
 
-    title: String;
+    title: string;
 
-    shortName?: String;
+    shortName?: string;
 
-    ogTitle?: String;
+    ogTitle?: string;
 
-    ogSaga?: String;
+    ogSaga?: string;
 
     description: string;
 
@@ -18,20 +18,20 @@ export class Item {
     genre2?: string;
 
     saga: string;
-    sagaEntry: String;
+    sagaEntry: string;
 
     state: string;
 
     rating: number;
     fav?: boolean;
 
-    type: String;
+    type: string;
 
     // Propiedades videojuegos
 
-    platform?: String;
+    platform?: string;
 
-    company?: String;
+    company?: string;
 
     duration?: number;
 
@@ -39,21 +39,21 @@ export class Item {
 
     //Propiedades anime
 
-    animationCompany?: String;
+    animationCompany?: string;
 
     chapters?: number;
 
-    audio?: String;
+    audio?: string;
 
     // Propiedades libros
 
-    author?: String;
+    author?: string;
 
     numPages?: number;
 
     // Propiedades comunes
 
-    composer?: String;
+    composer?: string;
 
 
 
