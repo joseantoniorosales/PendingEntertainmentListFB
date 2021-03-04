@@ -35,9 +35,9 @@ export class ResetPasswordPage implements OnInit {
 
   async alertResetPassword() {
     const alert = await this.alertController.create({
-      header: 'Recuperación de contraseña',
-      message: 'Se le ha enviado un correo electrónico a <strong>' + this.email + '</strong> con un enlace que le permitirá recuperar la contraseña.',
-      buttons: ['Aceptar']
+      header: 'Password recovery',
+      message: 'An e-mail will be sent to <strong>' + this.email + '</strong> with a link that will allow you to reset your password',
+      buttons: ['OK']
     });
 
     await alert.present();
@@ -45,9 +45,9 @@ export class ResetPasswordPage implements OnInit {
 
   async alertError() {
     const alert = await this.alertController.create({
-      header: 'Recuperación de contraseña',
-      message: 'No se ha podido enviar un correo a <strong>' + this.email + '</strong> para restablecer la contraseña. Inténtelo de nuevo más tarde.',
-      buttons: ['Aceptar']
+      header: 'Password Recovery',
+      message: 'An error happened and an e-mail could not be sent to <strong>' + this.email + '</strong> to reset the password',
+      buttons: ['OK']
     });
 
     await alert.present();
