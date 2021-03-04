@@ -16,9 +16,9 @@ Within the login screen, you can be redirected either to registering yourself wi
 
 ## LIST SCREEN
 
-Once you have logged in, you will have access to the list itself, where you can delete or edit the items you have registered. For now you can only add videogames, but in later updates there will be possible to add books and series.
+Once you have logged in, you will have access to the list itself, where you can delete or edit the items you have registered. You can add videogames, books and series.
 
-<img src="images/ListScreen.png"> 
+<img src="images/ListScreen2.png"> 
 
 ### ITEM OPTIONS
 
@@ -28,6 +28,12 @@ By sliding your finger right to left, you will have access to the options of eve
 
 ## EDIT SCREEN
 
-To add or edit an item, you will be redirected to the same page, with the only diference of the information already added when editing an item.
+To add or edit an item, you will be redirected to the same page, with the only diference of the information already added when editing an item. Every type of item (videogames, animes or books) has a block of input options that will change depending on the type of item you choose.
 
-<img src="images/EditScreen.png">
+<img src="images/GameEditScreen.png"><img src="images/AnimeEditScreen.png"><img src="images/BookEditScreen.png">
+
+## INFO SCREEN
+
+In the sliding menu, you can access the info page of the app, where you can read a short description of the functionality of the app and a rating function to rate the app itself made using Ionic Local Storage
+
+<img src="images/InfoScreen.png">
