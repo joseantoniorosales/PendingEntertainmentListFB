@@ -6,12 +6,34 @@
 
 <ion-content>
 
-  <p class="text"> 
-    
+
+
+  <p class="text" style="padding-left: 10px;">
+
     With this app made using ionic, you will be able to register the videogames that you are looking
     forward to play or playing at the moment, with a detailed info totally customizable by yourself. Add those
     games that will be released soon, those you plan to play when you have the time or your all-time favourites.
-  
+
   </p>
+
+  <p class="text" style="padding-left: 10px;">Rate the app!</p>
+
+
+    <ion-item>
+      <ion-label position="floating">Rating</ion-label>
+      <ion-range pin min="0" max="100" step="10" value="rateInput" snaps color="secondary"
+        [(ngModel)]="rateInput">
+        <ion-icon slot="start" size="small" color="warning" name="star-outline"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+    <p class="text" style="padding-left: 10px;">Your rating was: {{ data }} </p>
+
+    
+
+  <ion-button class="titleText" (click)="deleteRate()" color="danger">DELETE</ion-button>
+  <ion-button class="titleText" (click)="saveRate()" color="success">SAVE</ion-button>
+  <ion-button class="titleText" (click)="loadRate()" color="primary">LOAD</ion-button>
+  
 
 </ion-content>
