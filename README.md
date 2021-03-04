@@ -30,7 +30,7 @@ By sliding your finger right to left, you will have access to the options of eve
 
 To add or edit an item, you will be redirected to the same page, with the only diference of the information already added when editing an item. Every type of item (videogames, animes or books) has a block of input options that will change depending on the type of item you choose.
 
-<img src="images/GameEditScreen.png"><img src="images/AnimeEditScreen.png"><img src="images/BookEditScreen.png">
+<img src="images/GameEditScreen.png"><img src="images/AnimeEditScreen.png"><img src="images/BookEdit.png">
 
 ## INFO SCREEN
 
